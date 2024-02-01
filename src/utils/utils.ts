@@ -41,5 +41,5 @@ export function initSchema(){
     path.resolve(__dirname, '../templates/schema.config.template'),
     'utf8',
   )
-  storeFile(templateSource, ".schema-config","/")
+  storeFile(templateSource, "schema.config","/")
 }

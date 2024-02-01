@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 
-import { Option, program } from 'commander';
+import { Argument, Option, program } from 'commander';
 import { Executor } from './executor';
 import { config as dotenvConfig } from 'dotenv';
 import {
@@ -27,22 +27,18 @@ program
   initSchema();
 })
 
-// Define the 'make-rules' command
 program
-  .command('make-rules')
+  .addArgument(new Argument('<validation-library>', 'Specify the libraries such as joi, validatorJS and vine to generate basic validation rules (default is "joi")').choices([REQUEST_VALIDATION_TYPE_JOI, REQUEST_VALIDATION_TYPE_VALIDATORJS, REQUEST_VALIDATION_TYPE_VINE]).default(REQUEST_VALIDATION_TYPE_JOI))
   .addOption(new Option('-db, --database <database>', 'Specify the database').choices([DATABASE_MYSQL, DATABASE_POSTGRES, DATABASE_SQLITE]))
   .option('-c, --columns <columns>', 'Specify the column name of the table')
-  .addOption(new Option('-st, --schema-type [schema-type]', 'Specify the type of schema to generate (default is "joi")').choices([REQUEST_VALIDATION_TYPE_JOI, REQUEST_VALIDATION_TYPE_VALIDATORJS, REQUEST_VALIDATION_TYPE_VINE]).default(REQUEST_VALIDATION_TYPE_JOI))
   .requiredOption('-t, --table <table>', 'Specify the table name')
-  .action(async (cmd) => {
+  .action(async (schemaType,cmd) => {
     try {
       /** TODO:
        * .addOption(new Option('-rv, --request-validation [request-validation]', 'The request validation file type').choices([REQUEST_VALIDATION_TYPE_JOI, REQUEST_VALIDATION_TYPE_VALIDATORJS, REQUEST_VALIDATION_TYPE_VINE]))
          .option('-f, --request-file <request-file>', 'Specify the request validator file name')
        */
-        
-      const { table, database, columns = "",schemaType } = cmd;
-      
+      const { table, database, columns = ""} = cmd;   
       // Parse the options
       const options = {
         columns: columns.split(',').filter(Boolean),

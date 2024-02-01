@@ -15,7 +15,7 @@ export const CLASS_NAME_SUFFIX = `{{className}}RequestValidator`
 
 export const REQUEST_VALIDATION_TYPE_VINE = 'vine'
 export const REQUEST_VALIDATION_TYPE_JOI = 'joi'
-export const REQUEST_VALIDATION_TYPE_VALIDATORJS = 'validatorjs'
+export const REQUEST_VALIDATION_TYPE_VALIDATORJS = 'validatorJs'
 
 export const DATABASE_MYSQL="mysql";
 export const DATABASE_POSTGRES="postgres";

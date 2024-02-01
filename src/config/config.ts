@@ -4,7 +4,7 @@ import { validateConfig } from '../utils/validation'
 import * as fs from 'fs'
 import { successMessage, warningMessage } from '../utils/messages';
 
-const configFilePath=path.join(process.cwd(), '/.schema-config.js');
+const configFilePath=path.join(process.cwd(), '/schema.config.js');
 let config:any={};
 dotenvConfig()
 

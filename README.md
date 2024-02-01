@@ -1,5 +1,5 @@
 # Nodejs Validation Schema Rules
-[![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-validation-schema-rules)
+[![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-dynamic-validation-rules)
 [![npm](https://img.shields.io/npm/v/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/indexeddb-orm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -12,14 +12,14 @@ This tool generates preliminary validation rules for popular libraries such as [
 ## Installation
 
 ```bash
-npm install @tasmidur/nodejs-validation-schema-rules
-yarn add @tasmidur/nodejs-validation-schema-rules
+npm install @tasmidur/nodejs-dynamic-validation-rules
+yarn add @tasmidur/nodejs-dynamic-validation-rules
 ```
-Then run `nodeSchema init` if you install the package globally otherwise `npm run nodeSchema init` for  ".schema-config.js"
+Then run `ndVr init` if you install the package globally otherwise `npm run ndVr init` for  ".schema-config.js"
 
 ```bash
-   nodeSchema init
-   npm run nodeSchema init
+   ndVr init
+   npm run ndVr init
 ```
 
 Modify the ".schema-config.js"
@@ -53,26 +53,25 @@ module.exports = schemaConfig;
 
 ## Usage
 
-  The `nodeSchema make-rules -t my_table -db mysql -c column1,column2 -st joi` command generates validation rules for a specified database table and its columns. It creates a request validation file based on the chosen validation library (choices: "joi", "validatorjs", "vine"). The generated rules can be used to enforce data integrity and validate incoming requests in your application.
+  The `ndVr joi -t my_table -db mysql -c column1,column2` command generates validation rules for a specified database table and its columns. It creates a request validation rules based on the chosen validation library (choices: "joi", "validatorjs", "vine"). The generated rules can be used to enforce data integrity and validate incoming requests in your application.
 
   Options:
   - -db, --database: Specify the type of database (e.g., "mysql", "postgres", "sqlite").
   - -t, --table: Specify the name of the database table for which rules should be generated.
   - -c, --columns: Specify the column names of the table to generate rules for.
-  - -st, --schema-type: Specify the type of schema to generate (default is "joi").
   - -h, --help: Display help for the command.
 
   Examples:
   - Generate rules for a MySQL table named "users" with columns "id" and "name":
 
     ```bash
-       npm run nodeSchema make-rules -t users -db mysql -c id,name
+       npm run ndVr joi -t users -db mysql -c id,name
     ```
 
-  - Generate rules for a PostgreSQL table named "users" with a request validation file using "validatorjs":
+  - Generate rules for a PostgreSQL table named "users" with a request validation file using "validatorJs":
 
       ```bash
-      npm run nodeSchema make-rules -t users -db mysql -c id,name -st validatorjs
+      npm run ndVr validatorJs -t users -db mysql -c id,name
       ```
   
   as same as for sqlite.
@@ -99,7 +98,7 @@ CREATE TABLE data_types (
 Now if you run:
 
 ```bash
-  npm run nodeSchema make-rules -db sqlite -t data_types
+  npm run ndVr joi -db sqlite -t data_types
 ```
 
 You'll get:
@@ -126,7 +125,7 @@ ________________________________________________________________________________
 You can also explicitly specify the columns:
 
 ```bash
-npm run nodeSchema make-rules -db sqlite -t data_types -c name,age
+npm run ndVr joi -db sqlite -t data_types -c name,age
 ```
 
 Which gives you:
@@ -161,7 +160,7 @@ Validation rules may vary based on the selected driver due to differences in sup
 ## Testing
 
 ```bash
-npm run test
+npm test
 ```
 ## Author
 👤 **Md Tasmidur Rahman <tasmidurrahman@gmail.com> (https://tasmidur.netlify.app)**
@@ -172,7 +171,7 @@ npm run test
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/tasmidur21/nodejs-validation-schema-rules/issues)
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/tasmidur/nodejs-dynamic-validation-rules/issues)
 
 ## Show your support
 

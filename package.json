@@ -1,9 +1,9 @@
 {
-  "name": "@tasmidur/nodejs-validation-schema-rules",
-  "version": "v1.0.4-alpha",
-  "description": "Automatically generate initial Node.js validation schema rules from your database table schema. Use them as a foundation for refining and optimizing your validation rules as required",
+  "name": "@tasmidur/nodejs-dynamic-validation-rules",
+  "version": "v1.0.5-alpha",
+  "description": "This tool generates preliminary validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine",
   "bin": {
-    "nodeSchema": "dist/cli.js"
+    "ndVr": "dist/cli.js"
   },
   "main": "dist/cli.js",
   "scripts": {

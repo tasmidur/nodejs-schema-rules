@@ -45,6 +45,8 @@ export class VineRequestSchemaGenerator implements IRequestSchemaGenerator {
   }
 
   private parse = (rules: any) => {
+    console.log(rules);
+    
     return Object.keys(rules)
       .map((key: string) => {
         const schemaRules = (this.templateSetting.rules as any)[key]
@@ -55,19 +57,19 @@ export class VineRequestSchemaGenerator implements IRequestSchemaGenerator {
               case _item === 'string':
                 rule = '.string()'
                 break
-              case _item.includes('integer'):
+              case _item=='integer':
                 rule = '.integer()'
                 break
-              case _item.includes('numeric'):
+              case _item=='numeric':
                 rule = '.number()'
                 break
-              case _item.includes('date'):
+              case _item=='date':
                 rule = '.date()'
                 break
-              case _item.includes('bool'):
+              case  _item.includes('bool'):
                 rule = '.boolean()'
                 break
-              case _item.includes('in'):
+              case  /^in:/.test(_item):
                 const value = _item.split(':')[1].split(",").join(",")
                 rule = `.enum([${value}])`
                 break
@@ -81,7 +83,7 @@ export class VineRequestSchemaGenerator implements IRequestSchemaGenerator {
                 rule = `.minLength(${value})`
                 break
               }
-              case _item.includes('nullable'):
+              case _item=='nullable':
                 rule = '.optional()'
                 break
               default:

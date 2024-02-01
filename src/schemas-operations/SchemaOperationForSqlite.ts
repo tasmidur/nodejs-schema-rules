@@ -42,7 +42,7 @@ export class SchemaOperationForSqlite {
 
   public async generateColumnRules(): Promise<any> {
     const rules: IValidationSchema = {}
-    let tableSchema = await this.getTableSchema();  
+    let tableSchema = await this.getTableSchema();   
     if (this.skipColumns.length || this.selectedColumns.length) {
       tableSchema = tableSchema.filter(({ name }) => {
         return this.selectedColumns.length
@@ -63,6 +63,9 @@ export class SchemaOperationForSqlite {
         case dataType === 'tinyint(1)':
           columnRules.push('integer')
           break
+        case dataType === 'boolean':
+            columnRules.push('boolean')
+            break
         case dataType.includes('varchar') || dataType === 'text':
           columnRules.push('string')
           if (dataType.includes('varchar'))
@@ -79,14 +82,14 @@ export class SchemaOperationForSqlite {
           // Add more specific validation as needed
           columnRules.push('numeric')
           break
-        case dataType.includes('date') || dataType === 'time':
+        case dataType.includes('date') || dataType=='timestamp' || dataType=='time':
           columnRules.push('date')
           break
         default:
           // Skip BLOB for now
           break
       }
-      columnRules.push(Boolean(notnull) ? 'nullable' : 'required')
+      columnRules.push(!Boolean(notnull) ? 'nullable' : 'required')
       rules[name] = columnRules
     })
     return rules
