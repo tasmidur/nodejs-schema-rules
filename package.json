@@ -1,6 +1,6 @@
 {
   "name": "@tasmidur/nodejs-validation-schema-rules",
-  "version": "v1.0.1-alpha",
+  "version": "v1.0.3-alpha",
   "description": "Automatically generate initial Node.js validation schema rules from your database table schema. Use them as a foundation for refining and optimizing your validation rules as required",
   "bin": {
     "nodeSchema": "dist/cli.js"
@@ -30,7 +30,7 @@
     "validatorjs schema",
     "vine js schema"
   ],
-  "author": "Md Tasmidur Rahman",
+  "author": "Md Tasmidur Rahman <tasmidurrahman@gmail.com> (https://tasmidur.netlify.app)",
   "repository": {
     "type": "git",
     "url": "https://github.com/tasmidur/nodejs-validation-schema-rules.git"

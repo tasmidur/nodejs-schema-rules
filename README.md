@@ -1,5 +1,5 @@
 # Nodejs Validation Schema Rules
-[![NPM Downloads](https://img.shields.io/npm/dt/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-validation-schema-rules)
+[![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-validation-schema-rules)
 [![npm](https://img.shields.io/npm/v/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/indexeddb-orm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -164,7 +164,7 @@ Validation rules may vary based on the selected driver due to differences in sup
 npm run test
 ```
 
-👤 **Md Tasmidur Rahman**
+👤 **Md Tasmidur Rahman <tasmidurrahman@gmail.com> (https://tasmidur.netlify.app)**
 
 * Linkedin: [@tasmidur](https://www.linkedin.com/in/tasmidur/)
 * Github: [@tasmidur](https://github.com/tasmidur)
