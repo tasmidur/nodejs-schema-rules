@@ -1,12 +1,13 @@
 ## Dynamic NodeJS Schema Validation Rules Generator
 
 # Introduction
-Are you tired of writing validation rules for your database tables manually? Introducing  <a target="_new" href="[https://www.npmjs.com/package/joi](https://www.npmjs.com/package/nodejs-schema-rules)">nodejs-schema-rules</a>, a powerful CLI tool that automates the generation of basic validation rules for popular libraries such as <a target="_new" href="https://www.npmjs.com/package/joi">JOI</a>, <a target="_new" href="https://www.npmjs.com/package/validatorjs">ValidatorJS</a>, and <a target="_new" href="https://www.npmjs.com/package/@vinejs/vine">@vinejs/vine</a>. These rules are based on your database table schema, providing a convenient starting point that you can refine and enhance to suit your specific needs.
+Are you tired of writing validation rules for your database tables manually? Introducing  <a target="_new" href="https://www.npmjs.com/package/nodejs-schema-rules">nodejs-schema-rules</a>, a powerful CLI tool that automates the generation of basic validation rules for popular libraries such as <a target="_new" href="https://www.npmjs.com/package/joi">JOI</a>, <a target="_new" href="https://www.npmjs.com/package/validatorjs">ValidatorJS</a>, and <a target="_new" href="https://www.npmjs.com/package/@vinejs/vine">@vinejs/vine</a>. These rules are based on your database table schema, providing a convenient starting point that you can refine and enhance to suit your specific needs.
 
-In this blog post, we will explore the installation, configuration, and usage of nodejs-schema-rules. Whether you are working with MySQL, PostgreSQL, or SQLite databases, this tool offers a unified solution, making dynamic schema-based validation accessible and efficient. Stay tuned to discover how nodejs-schema-rules can enhance your development workflow and contribute to the overall reliability of your Node.js applications.
+In this blog post, we will explore the installation, configuration, and usage of <a target="_new" href="https://www.npmjs.com/package/nodejs-schema-rules">nodejs-schema-rules</a>. Whether you are working with MySQL, PostgreSQL, or SQLite databases, this tool offers a unified solution, making dynamic schema-based validation accessible and efficient. Stay tuned to discover how <a target="_new" href="https://www.npmjs.com/package/nodejs-schema-rules">nodejs-schema-rules</a> can enhance your development workflow and contribute to the overall reliability of your Node.js applications.
 
 Installation
-Install <strong>nodejs-schema-rules</strong> globally to access the <code>ndVr</code> CLI:
+
+Install <a target="_new" href="https://www.npmjs.com/package/nodejs-schema-rules">nodejs-schema-rules</a> globally to access the <code>ndVr</code> CLI:
 ```bash
 npm install nodejs-schema-rules -g
 # or
@@ -113,5 +114,5 @@ Testing
 yarn test
 ```
 
-By incorporating nodejs-schema-rules into your workflow, you not only enhance the integrity of your data but also contribute to a more efficient and maintainable codebase. The generated rules serve as a solid foundation, allowing developers to focus on refining and enhancing validation logic for their specific use cases.
+By incorporating <a target="_new" href="https://www.npmjs.com/package/nodejs-schema-rules">nodejs-schema-rules</a> into your workflow, you not only enhance the integrity of your data but also contribute to a more efficient and maintainable codebase. The generated rules serve as a solid foundation, allowing developers to focus on refining and enhancing validation logic for their specific use cases.
 
