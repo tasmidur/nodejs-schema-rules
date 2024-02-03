@@ -36,6 +36,8 @@ program
   .action(async (schemaType,cmd) => {
     try {
       const { table, database, columns = ""} = cmd;   
+      console.log(table,cmd);
+      
       if(!table){
         console.log(warningMessage("Specify the table name"))
         return;

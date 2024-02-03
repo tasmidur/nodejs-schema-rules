@@ -35,6 +35,7 @@ commander_1.program
     .action((schemaType, cmd) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { table, database, columns = "" } = cmd;
+        console.log(table, cmd);
         if (!table) {
             console.log((0, messages_1.warningMessage)("Specify the table name"));
             return;
