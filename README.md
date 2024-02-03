@@ -1,7 +1,7 @@
 # NodeJS Schema Rules
 
-[![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-dynamic-validation-rules)
-[![npm](https://img.shields.io/npm/v/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/indexeddb-orm)
+[![NPM Downloads](https://img.shields.io/npm/dw/nodejs-schema-rules )](https://www.npmjs.com/package/nodejs-schema-rules )
+[![npm](https://img.shields.io/npm/v/nodejs-schema-rules)](https://www.npmjs.com/package/nodejs-schema-rules)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This tool automatically generates basic validation rules for popular libraries such as [JOI](https://www.npmjs.com/package/joi),    [ValidatorJS](https://www.npmjs.com/package/validatorjs) and [@vinejs/vine](https://www.npmjs.com/package/@vinejs/vine) rules based on your database table schema. These rules serve as a convenient starting point, allowing you to refine and enhance them to suit your specific needs.
@@ -10,8 +10,8 @@ This tool automatically generates basic validation rules for popular libraries s
 ## Installation
 
 ```bash
-npm install @tasmidur/nodejs-dynamic-validation-rules
-yarn add @tasmidur/nodejs-dynamic-validation-rules
+npm install nodejs-schema-rules 
+yarn add nodejs-schema-rules 
 ```
 Then run `ndVr init` if you install the package globally otherwise `npm run ndVr init` for  `schema.config.js`.
 
