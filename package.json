@@ -1,7 +1,7 @@
 {
-  "name": "dynamic-validation-rules",
-  "version": "v1.0.5-alpha",
-  "description": "This tool generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine",
+  "name": "nodejs-schema-rules",
+  "version": "v1.0.0-alpha",
+  "description": "This tool automatically generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine based on your database table schema!",
   "bin": {
     "ndVr": "dist/cli.js"
   },

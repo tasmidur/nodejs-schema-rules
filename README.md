@@ -1,12 +1,10 @@
-# Dynamic Validation Rules
+# NodeJS Schema Rules
+
 [![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-dynamic-validation-rules)
 [![npm](https://img.shields.io/npm/v/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/indexeddb-orm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
-Automatically generate basic validation rules based on your database table schema effortlessly!
-
-This tool generates preliminary validation rules for popular libraries such as [JOI](https://www.npmjs.com/package/joi),    [ValidatorJS](https://www.npmjs.com/package/validatorjs) and [@vinejs/vine](https://www.npmjs.com/package/@vinejs/vine). These rules serve as a convenient starting point, allowing you to refine and enhance them to suit your specific needs.
+This tool automatically generates basic validation rules for popular libraries such as [JOI](https://www.npmjs.com/package/joi),    [ValidatorJS](https://www.npmjs.com/package/validatorjs) and [@vinejs/vine](https://www.npmjs.com/package/@vinejs/vine) rules based on your database table schema. These rules serve as a convenient starting point, allowing you to refine and enhance them to suit your specific needs.
 
 
 ## Installation
