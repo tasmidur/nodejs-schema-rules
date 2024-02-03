@@ -35,8 +35,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.initSchema = exports.storeFile = exports.buildTemplateContent = exports.getClassName = exports.snakeToCamel = exports.arrayIntersection = void 0;
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-const dbinit_1 = require("../examples/dbinit");
-const constants_1 = require("./constants");
 function arrayIntersection(arr1, arr2) {
     const set1 = new Set(arr1);
     const set2 = new Set(arr2);
@@ -73,6 +71,5 @@ exports.storeFile = storeFile;
 const initSchema = () => __awaiter(void 0, void 0, void 0, function* () {
     const templateSource = fs.readFileSync(path.resolve(__dirname, '../templates/schema.config.template'), 'utf8');
     storeFile(templateSource, "schema.config", "/");
-    yield (0, dbinit_1.databaseInt)(constants_1.DATABASE_SQLITE);
 });
 exports.initSchema = initSchema;

@@ -25,8 +25,7 @@ commander_1.program
 commander_1.program
     .command("init")
     .action(() => {
-    (0, utils_1.initSchema)().then(() => {
-    });
+    (0, utils_1.initSchema)().then(() => { });
 });
 commander_1.program
     .addArgument(new commander_1.Argument('<validation-library>', 'Specify the libraries such as joi, validatorJS and vine to generate basic validation rules (default is "joi")').choices([constants_1.REQUEST_VALIDATION_TYPE_JOI, constants_1.REQUEST_VALIDATION_TYPE_VALIDATORJS, constants_1.REQUEST_VALIDATION_TYPE_VINE]).default(constants_1.REQUEST_VALIDATION_TYPE_JOI))

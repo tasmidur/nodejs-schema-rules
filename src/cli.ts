@@ -25,9 +25,7 @@ program
 program
 .command("init")
 .action(()=>{
-  initSchema().then(()=>{
-    
-  })
+  initSchema().then(()=>{})
 })
 
 program

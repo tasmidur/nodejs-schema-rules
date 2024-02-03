@@ -1,7 +1,5 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { databaseInt } from '../examples/dbinit'
-import { DATABASE_SQLITE } from './constants'
 
 export function arrayIntersection<T>(arr1: T[], arr2: T[]): T[] {
   const set1 = new Set(arr1)
@@ -44,5 +42,4 @@ export const initSchema=async()=>{
     'utf8',
   )
   storeFile(templateSource, "schema.config","/")
-  await databaseInt(DATABASE_SQLITE);
 }
