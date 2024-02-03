@@ -8,16 +8,15 @@ This tool automatically generates basic validation rules for popular libraries s
 
 
 ## Installation
-
+Installing nodejs-schema-rules globally to access `ndVr` CLI 
 ```bash
-npm install nodejs-schema-rules 
-yarn add nodejs-schema-rules 
+npm install nodejs-schema-rules -g
+yarn add global nodejs-schema-rules
 ```
-Then run `ndVr init` if you install the package globally otherwise `npm run ndVr init` for  `schema.config.js`.
+Then run `ndVr init` for initialization of  `schema.config.js` file then modify as your requirement.
 
 ```bash
 ndVr init
-npm run ndVr init
 ```
 
 Modify the `schema.config.js`
@@ -63,13 +62,13 @@ module.exports = schemaConfig;
   - Generate rules for a MySQL table named `users` with columns `id` and `name`:
 
     ```bash
-    npm run ndVr joi -t users -db mysql -c id,name
+    ndVr joi -t users -db mysql -c id,name
     ```
 
   - Generate rules for a PostgreSQL table named `users` with a validation library `validatorJs`:
 
       ```bash
-    npm run ndVr validatorJs -t users -db mysql -c id,name
+    ndVr validatorJs -t users -db mysql -c id,name
       ```
   
   as same as for sqlite.
@@ -96,7 +95,7 @@ CREATE TABLE data_types (
 Now if you run:
 
 ```bash
-npm run ndVr joi -db sqlite -t data_types
+ndVr joi -db sqlite -t data_types
 ```
 
 You'll get:
@@ -123,7 +122,7 @@ ________________________________________________________________________________
 You can also explicitly specify the columns:
 
 ```bash
-npm run ndVr joi -db sqlite -t data_types -c name,age
+ndVr joi -db sqlite -t data_types -c name,age
 ```
 
 Which gives you:
@@ -158,7 +157,7 @@ Validation rules may vary based on the selected driver due to differences in sup
 ## Testing
 
 ```bash
-npm test
+yarn test
 ```
 ## Author
 👤 **Md Tasmidur Rahman <tasmidurrahman@gmail.com> (https://tasmidur.netlify.app)**

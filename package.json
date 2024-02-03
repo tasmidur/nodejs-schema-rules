@@ -1,21 +1,18 @@
 {
   "name": "nodejs-schema-rules",
-  "version": "v1.0.4-alpha",
-  "description": "This tool automatically generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine based on your database table schema!",
+  "version": "v1.0.5-alpha",
+  "description": "The CLI tool automatically generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine based on your database table schema!",
   "bin": {
     "ndVr": "dist/cli.js"
   },
   "main": "dist/cli.js",
   "scripts": {
     "format": "prettier --write 'src/**/*.{js,ts}'",
-    "lint": "eslint src --fix",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.template dist/",
     "start": "node dist/cli.js",
-    "watch": "tsc --watch",
-    "build": "echo Building package && npm run clean && npm run compile && npm run copy-files && echo Build complete",
-    "dev": "npm run watch & node dist/cli.js",
-    "compile": "tsc",
+    "dev": "yarn build && node dist/cli.js",
+    "build": "yarn clean && tsc && yarn copy-files",
     "test": "jest"
   },
   "jest": {
