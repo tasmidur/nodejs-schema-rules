@@ -1,4 +1,4 @@
-# Nodejs Validation Schema Rules
+# Dynamic Validation Rules
 [![NPM Downloads](https://img.shields.io/npm/dw/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/@tasmidur/nodejs-dynamic-validation-rules)
 [![npm](https://img.shields.io/npm/v/%40tasmidur%2Fnodejs-validation-schema-rules)](https://www.npmjs.com/package/indexeddb-orm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -15,14 +15,14 @@ This tool generates preliminary validation rules for popular libraries such as [
 npm install @tasmidur/nodejs-dynamic-validation-rules
 yarn add @tasmidur/nodejs-dynamic-validation-rules
 ```
-Then run `ndVr init` if you install the package globally otherwise `npm run ndVr init` for  ".schema-config.js"
+Then run `ndVr init` if you install the package globally otherwise `npm run ndVr init` for  `schema.config.js`.
 
 ```bash
-   ndVr init
-   npm run ndVr init
+ndVr init
+npm run ndVr init
 ```
 
-Modify the ".schema-config.js"
+Modify the `schema.config.js`
 
 ```javascript
 require("dotenv").config();
@@ -53,25 +53,25 @@ module.exports = schemaConfig;
 
 ## Usage
 
-  The `ndVr joi -t my_table -db mysql -c column1,column2` command generates validation rules for a specified database table and its columns. It creates a request validation rules based on the chosen validation library (choices: "joi", "validatorjs", "vine"). The generated rules can be used to enforce data integrity and validate incoming requests in your application.
+  The `ndVr joi -t my_table -db mysql -c column1,column2` command generates validation rules for a specified database table and its columns. It creates a validation rules based on the chosen validation libraries like `joi`, "validatorjs", "vine". The generated rules can be used to enforce data integrity and validate incoming requests in your application.
 
   Options:
-  - -db, --database: Specify the type of database (e.g., "mysql", "postgres", "sqlite").
+  - -db, --database: Specify the type of database (e.g., `mysql`, `postgres`, `sqlite`).
   - -t, --table: Specify the name of the database table for which rules should be generated.
   - -c, --columns: Specify the column names of the table to generate rules for.
   - -h, --help: Display help for the command.
 
   Examples:
-  - Generate rules for a MySQL table named "users" with columns "id" and "name":
+  - Generate rules for a MySQL table named `users` with columns `id` and `name`:
 
     ```bash
-       npm run ndVr joi -t users -db mysql -c id,name
+    npm run ndVr joi -t users -db mysql -c id,name
     ```
 
-  - Generate rules for a PostgreSQL table named "users" with a request validation file using "validatorJs":
+  - Generate rules for a PostgreSQL table named `users` with a validation library `validatorJs`:
 
       ```bash
-      npm run ndVr validatorJs -t users -db mysql -c id,name
+    npm run ndVr validatorJs -t users -db mysql -c id,name
       ```
   
   as same as for sqlite.
@@ -98,7 +98,7 @@ CREATE TABLE data_types (
 Now if you run:
 
 ```bash
-  npm run ndVr joi -db sqlite -t data_types
+npm run ndVr joi -db sqlite -t data_types
 ```
 
 You'll get:
@@ -144,7 +144,7 @@ ________________________________________________________________________________
 
 ### Always skip columns
 
-To always skip columns add it in the ".schema-config.js" file, under `skipColumns` attribute.
+To always skip columns add it in the `schema-config.js` file, under `skipColumns` attribute.
 
 ```javascript
 skipColumns: (process.env.SKIP_COLUMNS || 'created_at,updated_at,deleted_at').split(',')

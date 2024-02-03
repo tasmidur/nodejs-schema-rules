@@ -34,12 +34,7 @@ program
   .requiredOption('-t, --table <table>', 'Specify the table name')
   .action(async (schemaType,cmd) => {
     try {
-      /** TODO:
-       * .addOption(new Option('-rv, --request-validation [request-validation]', 'The request validation file type').choices([REQUEST_VALIDATION_TYPE_JOI, REQUEST_VALIDATION_TYPE_VALIDATORJS, REQUEST_VALIDATION_TYPE_VINE]))
-         .option('-f, --request-file <request-file>', 'Specify the request validator file name')
-       */
       const { table, database, columns = ""} = cmd;   
-      // Parse the options
       const options = {
         columns: columns.split(',').filter(Boolean),
         validationSchemaType: schemaType,
@@ -56,11 +51,10 @@ program
     }
   });
 
-// Generate and print documentation for the options
 program.on('--help', () => {
   console.log('');
   console.log('Examples:');
-  console.log('$ nodeSchema make-rules -t my_table -db mysql -c column1,column2 -st joi');
+  console.log('$ ndVr joi -t my_table -db mysql -c column1,column2');
 });
 
 // Parse the command line arguments

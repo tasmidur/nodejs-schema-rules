@@ -1,7 +1,7 @@
 {
-  "name": "@tasmidur/nodejs-dynamic-validation-rules",
+  "name": "dynamic-validation-rules",
   "version": "v1.0.5-alpha",
-  "description": "This tool generates preliminary validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine",
+  "description": "This tool generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine",
   "bin": {
     "ndVr": "dist/cli.js"
   },
@@ -25,10 +25,14 @@
     "schema",
     "nodejs-validation",
     "dynamic-schema",
-    "dynamic-validation-rules-from-db",
-    "joi schema",
-    "validatorjs schema",
-    "vine js schema"
+    "dynamic-rules",
+    "dynamic-validation-rules",
+    "joi validation rules",
+    "validatorjs  validation rules",
+    "vineJs  validation rules",
+    "vinejs@vine  validation rules",
+    "mysql schema rules",
+    "postgres schema rules"
   ],
   "author": "Md Tasmidur Rahman <tasmidurrahman@gmail.com> (https://tasmidur.netlify.app)",
   "repository": {
