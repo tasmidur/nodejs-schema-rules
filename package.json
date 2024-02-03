@@ -1,6 +1,6 @@
 {
   "name": "nodejs-schema-rules",
-  "version": "v1.0.1-alpha",
+  "version": "v1.0.2-alpha",
   "description": "This tool automatically generates basic validation rules for popular libraries such as JOI, ValidatorJS and @vinejs/vine based on your database table schema!",
   "bin": {
     "ndVr": "dist/cli.js"

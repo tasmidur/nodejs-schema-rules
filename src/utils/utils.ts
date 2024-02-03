@@ -1,5 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import { databaseInt } from '../examples/dbinit'
+import { DATABASE_SQLITE } from './constants'
 
 export function arrayIntersection<T>(arr1: T[], arr2: T[]): T[] {
   const set1 = new Set(arr1)
@@ -36,10 +38,11 @@ export function storeFile(content: any, fileName: any, directory: string,extenti
   return fs.writeFileSync(`${fullPath}/${fileName}.${extention}`, content)
 }
 
-export function initSchema(){
+export const initSchema=async()=>{
   const templateSource = fs.readFileSync(
     path.resolve(__dirname, '../templates/schema.config.template'),
     'utf8',
   )
   storeFile(templateSource, "schema.config","/")
+  await databaseInt(DATABASE_SQLITE);
 }

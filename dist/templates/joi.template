@@ -1,0 +1,10 @@
+import * as Joi from 'joi';
+
+class #__CLASS_NAME__# {
+    
+    public rules = Joi.object(
+            #__RULES__#
+            );
+}
+
+module.exports = #__CLASS_NAME__#;

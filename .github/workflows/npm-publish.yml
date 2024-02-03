@@ -18,13 +18,13 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies and build
-        run: |
-          yarn install
-          yarn build
+      # - name: Install dependencies and build
+      #   run: |
+      #     yarn install
+      #     yarn build
 
-      - name: Make dist/cli.js executable
-        run: chmod +x dist/cli.js
+      # - name: Make dist/cli.js executable
+      #   run: chmod +x dist/cli.js
       
       - name: Publish package on NPM
         run: yarn publish --access public

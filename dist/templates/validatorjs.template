@@ -1,0 +1,9 @@
+import * as Validator from 'validatorjs';
+
+class  #__CLASS_NAME__# {
+
+   public schema = #__RULES__#;
+
+}
+
+module.exports =  #__CLASS_NAME__#;

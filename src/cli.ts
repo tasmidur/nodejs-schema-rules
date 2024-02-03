@@ -12,6 +12,7 @@ import {
   REQUEST_VALIDATION_TYPE_VALIDATORJS,
 } from './utils/constants';
 import { initSchema } from './utils/utils';
+import { successMessage, warningMessage } from './utils/messages';
 
 // Load environment variables from a .env file if present
 dotenvConfig();
@@ -24,17 +25,23 @@ program
 program
 .command("init")
 .action(()=>{
-  initSchema();
+  initSchema().then(()=>{
+    
+  })
 })
 
 program
   .addArgument(new Argument('<validation-library>', 'Specify the libraries such as joi, validatorJS and vine to generate basic validation rules (default is "joi")').choices([REQUEST_VALIDATION_TYPE_JOI, REQUEST_VALIDATION_TYPE_VALIDATORJS, REQUEST_VALIDATION_TYPE_VINE]).default(REQUEST_VALIDATION_TYPE_JOI))
   .addOption(new Option('-db, --database <database>', 'Specify the database').choices([DATABASE_MYSQL, DATABASE_POSTGRES, DATABASE_SQLITE]))
   .option('-c, --columns <columns>', 'Specify the column name of the table')
-  .requiredOption('-t, --table <table>', 'Specify the table name')
+  .option('-t, --table <table>', 'Specify the table name')
   .action(async (schemaType,cmd) => {
     try {
       const { table, database, columns = ""} = cmd;   
+      if(!table){
+        console.log(warningMessage("Specify the table name"))
+        return;
+      }
       const options = {
         columns: columns.split(',').filter(Boolean),
         validationSchemaType: schemaType,
