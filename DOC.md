@@ -1,6 +1,6 @@
-Dynamic NodeJS Schema Validation Rules Generator
+## Dynamic NodeJS Schema Validation Rules Generator
 
-Introduction
+# Introduction
 Are you tired of writing validation rules for your database tables manually? Introducing <strong>nodejs-schema-rules</strong>, a powerful CLI tool that automates the generation of basic validation rules for popular libraries such as <a target="_new" href="https://www.npmjs.com/package/joi">JOI</a>, <a target="_new" href="https://www.npmjs.com/package/validatorjs">ValidatorJS</a>, and <a target="_new" href="https://www.npmjs.com/package/@vinejs/vine">@vinejs/vine</a>. These rules are based on your database table schema, providing a convenient starting point that you can refine and enhance to suit your specific needs.
 
 In this blog post, we will explore the installation, configuration, and usage of nodejs-schema-rules. Whether you are working with MySQL, PostgreSQL, or SQLite databases, this tool offers a unified solution, making dynamic schema-based validation accessible and efficient. Stay tuned to discover how nodejs-schema-rules can enhance your development workflow and contribute to the overall reliability of your Node.js applications.
