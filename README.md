@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/nodejs-schema-rules)](https://www.npmjs.com/package/nodejs-schema-rules)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This tool automatically generates basic validation rules for popular libraries such as [JOI](https://www.npmjs.com/package/joi),    [ValidatorJS](https://www.npmjs.com/package/validatorjs) and [@vinejs/vine](https://www.npmjs.com/package/@vinejs/vine) rules based on your database table schema. These rules serve as a convenient starting point, allowing you to refine and enhance them to suit your specific needs.
+The CLI tool automatically generates basic validation rules for popular libraries such as [JOI](https://www.npmjs.com/package/joi),    [ValidatorJS](https://www.npmjs.com/package/validatorjs) and [@vinejs/vine](https://www.npmjs.com/package/@vinejs/vine) rules based on your database table schema. These rules serve as a convenient starting point, allowing you to refine and enhance them to suit your specific needs.
 
 
 ## Installation
