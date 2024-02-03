@@ -1,6 +1,6 @@
 # NodeJS Schema Rules
 
-[![NPM Downloads](https://img.shields.io/npm/dw/nodejs-schema-rules )](https://www.npmjs.com/package/nodejs-schema-rules )
+[![NPM Downloads](https://img.shields.io/npm/dw/nodejs-schema-rules )](https://www.npmjs.com/package/nodejs-schema-rules)
 [![npm](https://img.shields.io/npm/v/nodejs-schema-rules)](https://www.npmjs.com/package/nodejs-schema-rules)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
