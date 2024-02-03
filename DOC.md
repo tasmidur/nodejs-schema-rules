@@ -58,6 +58,7 @@ Examples:
 </code></div></div></pre></li>
 Schema Configuration:
 If you have a table structure like this:
+
 ```sql
 CREATE TABLE data_types (
     id INTEGER PRIMARY KEY,
@@ -107,6 +108,7 @@ skipColumns: (process.env.SKIP_COLUMNS || 'created_at,updated_at,deleted_at').sp
 Supported Drivers
 Supported database drivers are MySQL, PostgreSQL, and SQLite. Validation rules may vary based on the selected driver due to differences in supported data types and range specifications.
 Testing
+
 ```bash
 yarn test
 ```
